@@ -1,0 +1,30 @@
+.searchContainer{
+	align-items: center;
+	display: flex;
+	gap: 8px;
+	padding: 12px;
+}
+
+.menuCustom{
+	border: 2px solid #88e23b !important;
+	padding: 20px !important;
+	box-shadow: 0px 1px 6px 0px #000 !important;
+	border-radius: 12px !important;
+	background-color: transparent !important;
+	color: rgba(0, 0, 0, 0.87) !important;
+	backdrop-filter: blur(10px) !important;
+}
+
+.menuItemCustom {
+	font-family: 'Get Schwifty', sans-serif !important;
+	color: #88e23b !important;
+	font-size: 20px !important;
+	color: rgba(0, 0, 0, 0.87) !important;
+	backdrop-filter: blur(10px) !important;
+	background-color: transparent !important;
+}
+
+.menuItemCustom:hover {
+	background-color: rgba(136, 226, 59, 0.1) !important;
+	color: #88e23b !important;
+}

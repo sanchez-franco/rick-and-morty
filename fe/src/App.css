@@ -1,0 +1,243 @@
+#root {
+  width: 100%;
+  text-align: center;
+  background: #000000;
+}
+
+body{
+  background-color: #000000;
+}
+
+@font-face {
+  font-family: 'Get Schwifty';
+  src: url('./assets/fonts/get_schwifty.ttf') format('truetype');
+}
+
+
+.rickFont {
+  font-family: 'Get Schwifty', sans-serif;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.ant-btn, .ant-btn-variant-outlined {
+  font-family: 'Get Schwifty', sans-serif;
+  color: #000000;
+  font-size: 20px;
+  background-color: #88e23b;
+  font-weight: 600;
+  border: none;
+  padding: 24px;
+  box-shadow: 1px 1px 13px 2px #60a85f;
+}
+
+.ant-btn[disabled],
+.ant-btn:disabled,
+.ant-btn[aria-disabled='true']{
+  opacity: 0.6 !important;
+  pointer-events: none;
+  color: #000000 !important;
+  background-color: #88e23b !important;
+  border: none !important;
+}
+
+.ant-btn:hover,
+.ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover, 
+.ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):hover,
+.ant-btn:focus,
+.ant-btn-variant-solid:not(:disabled):not(.ant-btn-disabled):hover,
+.ant-btn:not(:disabled):hover {
+  background-color: #76cc32; 
+  color: #000000;
+}
+
+.ant-input-affix-wrapper {
+  background-color: transparent;
+  border: 1px solid #88e23b !important;
+  height: 48px;
+  box-shadow: 1px 1px 13px 2px #60a85f;
+}
+
+.ant-input-affix-wrapper:hover {
+  background-color: transparent;
+  border: 1px solid #88e23b !important;
+}
+
+.ant-input, .ant-input-outlined:focus-within{
+  background-color: transparent !important;
+  color: #a6cccc !important;
+  border: none;
+}
+
+.ant-input::placeholder {
+  color: #a6cccc !important;
+  opacity: 1 !important;
+  font-family: 'Get Schwifty', sans-serif;
+}
+
+.ant-input:focus,
+.ant-input-focused {
+  border-color: #88e23b !important;
+  box-shadow: none !important;
+}
+
+.ant-input-textarea {
+  background-color: transparent !important;
+  border: 1px solid #88e23b !important;
+  color: #a6cccc !important;
+}
+
+.ant-input-textarea::placeholder {
+  color: #a6cccc !important;
+  opacity: 1 !important;
+}
+
+.ant-input-affix-wrapper .anticon.ant-input-password-icon{
+  color: #88e23b;
+}
+
+.ant-modal .ant-modal-content {
+  border: 2px solid #88e23b;
+  padding: 20px;
+  box-shadow: 0px 1px 6px 0px #000;
+  border-radius: 12px;
+  color: rgba(0, 0, 0, 0.87);
+  backdrop-filter: blur(10px);
+  margin: 50px;
+  width: 500px;
+  background: transparent;
+}
+
+.ant-modal-header {
+  background: transparent !important;
+  border-bottom: none !important;
+}
+
+.ant-modal-title {
+  font-family: 'Get Schwifty', sans-serif !important;
+  color: #a6cccc !important;
+  font-size: 30px !important;
+  text-shadow: 2px 2px 4px #88e23b !important;
+}
+
+.ant-modal-close {
+  color: white !important;
+
+  &:hover {
+    color: #88e23b !important;
+    text-shadow: 0 0 8px #88e23b;
+  }
+}
+
+.ant-modal-close-x {
+  font-size: 20px;
+  line-height: 1;
+}
+
+
+p{
+  font-family: 'Get Schwifty', sans-serif;
+  color: #88e23b;
+  font-size: 20px;
+}
+
+strong{
+  font-family: 'Get Schwifty', sans-serif;
+  color: #a6cccc;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px #88e23b;  
+}
+
+td{
+  font-family: 'Get Schwifty', sans-serif;
+  color: #88e23b;
+  font-size: 20px;
+}
+
+tr{
+  font-family: 'Get Schwifty', sans-serif;
+  color: #a6cccc;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px #88e23b;  
+}
+
+img{
+  border-radius: 8px;
+}
+
+.ant-table,
+.ant-table-container,
+.ant-table-content,
+.ant-table-cell {
+  background-color: transparent !important;
+  border-bottom: 1px solid  #6b7132 !important;
+}
+
+.ant-table-row:hover{
+  background-color: rgba(107, 113, 50, 0.2);
+}
+
+.ant-table-thead  {
+  border-radius: 12px;
+  background: #6b7132;
+  box-shadow: -3px 1px 13px 2px #60a85f;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background-color: rgba(255, 255, 255, 0.05); 
+}
+
+.ant-checkbox-inner {
+  background-color: transparent !important;
+  border: 1px solid #88e23b !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #88e23b !important;
+  border-color: #88e23b !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner::after {
+  border-color: white !important;
+}
+
+.ant-form-item-label >label {
+    font-family: 'Get Schwifty', sans-serif;
+    color: #88e23b !important;
+    font-size: 20px !important;
+}

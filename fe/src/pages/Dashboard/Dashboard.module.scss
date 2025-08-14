@@ -1,0 +1,43 @@
+.title {
+  font-family: 'Get Schwifty', sans-serif;
+  color: #a6cccc;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px #88e23b;
+}
+
+.text {
+  font-family: 'Get Schwifty', sans-serif;
+  color: #88e23b;
+  font-size: 20px;
+  padding-top: 50px;
+}
+
+.image{
+  width: 400px;
+}
+
+.imgLogo{
+  width: 55px;
+}
+
+.titleContainer{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.imageCharacter{
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 3px 3px 3px 1px #043c6e;
+}
+
+.logOutContainer {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  justify-content: end;
+}

@@ -7,8 +7,8 @@ namespace RickMortyApi.Database
     public class SQLUnitOfWork : IUnitOfWork
     {
         private readonly RickAndMortyDbContext _context;
-        private readonly IRepository<AccountDb> _accountRepository;
-        private readonly IRepository<FavoriteDb> _favoriteRepository;
+        private readonly ISQLAccountRepository _accountRepository;
+        private readonly ISQLFavoriteRepository _favoriteRepository;
 
         public SQLUnitOfWork(RickAndMortyDbContext context, SQLAccountRepository accountRepository, SQLFavoriteRepository favoriteRepository)
         {

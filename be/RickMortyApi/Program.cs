@@ -42,6 +42,10 @@ var wsHandler = new FavoritesWebSocketHandler();
 
 builder.Services.AddSingleton<FavoritesWebSocketHandler>(wsHandler);
 builder.Services.AddSingleton<JwtSettings>(jwtSettings);
+builder.Services.AddTransient<SQLAccountRepository>();
+builder.Services.AddTransient<SQLFavoriteRepository>();
+builder.Services.AddTransient<SQLUnitOfWork>();
+
 builder.Services.AddScoped<ISQLAccountRepository, SQLAccountRepository>();
 builder.Services.AddScoped<ISQLFavoriteRepository, SQLFavoriteRepository>();
 builder.Services.AddScoped<IUnitOfWork, SQLUnitOfWork>();
@@ -97,7 +101,7 @@ app.UseRouting();
 
 app.UseCors(builder =>
     builder
-        .WithOrigins("http://localhost:5173")
+        .WithOrigins("https://localhost:7114")
         .AllowAnyHeader()
         .AllowAnyMethod()
         .AllowCredentials()

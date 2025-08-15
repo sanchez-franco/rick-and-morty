@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using RickMortyApi.Database;
+using RickMortyApi.Interfaces;
 using RickMortyApi.Models;
 using RickMortyApi.WebSockets;
 
@@ -12,10 +12,10 @@ namespace RickMortyApi.Controllers
     [Route("api/[controller]")]
     public class FavoritesController : ControllerBase
     {
-        private readonly RickAndMortyDbContext _dbContext;
+        private readonly IUnitOfWork _dbContext;
         private readonly FavoritesWebSocketHandler _favoritesWebSocketHandler;
 
-        public FavoritesController(RickAndMortyDbContext dbContext, FavoritesWebSocketHandler favoritesWebSocketHandler)
+        public FavoritesController(SQLUnitOfWork dbContext, FavoritesWebSocketHandler favoritesWebSocketHandler)
         {
             _dbContext = dbContext;
             _favoritesWebSocketHandler = favoritesWebSocketHandler;

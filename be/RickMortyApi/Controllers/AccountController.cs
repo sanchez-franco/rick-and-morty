@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using RickMortyApi.Database;
+using RickMortyApi.Interfaces;
 using RickMortyApi.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -14,9 +15,9 @@ namespace RickMortyApi.Controllers
     public class AccountController : ControllerBase
     {
         private readonly string _secretKey;
-        private readonly RickAndMortyDbContext _dbContext;
+        private readonly IUnitOfWork _dbContext;
 
-        public AccountController(JwtSettings settings, RickAndMortyDbContext dbContext)
+        public AccountController(JwtSettings settings, SQLUnitOfWork dbContext)
         {
             _secretKey = settings.Secret;
             _dbContext = dbContext;

@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using RickMortyApi.Database;
+using RickMortyApi.Interfaces;
 using RickMortyApi.Models;
 using RickMortyApi.WebSockets;
 using System.Net.WebSockets;
@@ -38,8 +39,12 @@ builder.Services.AddAuthentication(options =>
     };
 });
 var wsHandler = new FavoritesWebSocketHandler();
+
 builder.Services.AddSingleton<FavoritesWebSocketHandler>(wsHandler);
 builder.Services.AddSingleton<JwtSettings>(jwtSettings);
+builder.Services.AddScoped<ISQLAccountRepository, SQLAccountRepository>();
+builder.Services.AddScoped<ISQLFavoriteRepository, SQLFavoriteRepository>();
+builder.Services.AddScoped<IUnitOfWork, SQLUnitOfWork>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddWebSockets(options =>
